@@ -59,15 +59,29 @@
             <div class="main-page-charts">
                 <h4>Inserir nova diabete</h4>
                 <form method="post" action="models/inserirDiabete.php">
+                    <label for="valor">Valor da diabete</label>
                     <input type="number" id="valor" name="valor">
+                    <label for="data">Data da Medicao</label>
                     <input type="date" id="data" name="data">
+                    <label for="horario">Hora de medicao</label>
                     <input type="time" id="horario" name="horario">
                     <button>Inserir</button>
                 </form>
             </div>
 
             <div class="main-page-resume">
-
+                <h4>Inserir nova pressao</h4>
+                <form method="post" action="models/inserirPressao.php">
+                    <label for="sistolico">Valor Sistolico</label>
+                    <input type="number" id="sistolico" name="sistolico">
+                    <label for="diastolico">Valor Diastolico</label>
+                    <input type="number" id="diastolico" name="diastolico">
+                    <label for="data">Data da Medicao</label>
+                    <input type="date" id="data" name="data">
+                    <label for="horario">Hora de medicao</label>
+                    <input type="time" id="horario" name="horario">
+                    <button>Inserir</button>
+                </form>
             </div>
 
         </div>
