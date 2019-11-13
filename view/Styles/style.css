@@ -1,0 +1,102 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #F0F4F5;
+}
+
+.main-content {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menu-bar {
+    height: 55px;
+    background-color: #009ABB;
+    grid-column: 1/8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menu-bar #menu-itens {
+    text-decoration: none;
+    margin-top: 15px;
+    grid-column: 1/3;
+    list-style: none;
+}
+
+.menu-bar .logged-info {
+    margin-top: 15px;
+    color: white;
+    grid-column: 7/8;
+}
+
+.menu-bar .logged-info a {
+    color: black;
+}
+
+.menu-bar #menu-itens ul li {
+    text-decoration: none;
+    display: inline;
+}
+
+.menu-bar #menu-itens a {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.page-content {
+    grid-column: 1/8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: green;
+}
+
+.main-page-charts {
+    margin-top: 40px;
+    grid-column: 2/4;
+    background-color: yellow;
+}
+
+.profile-infos {
+    margin-top: 40px;
+    height: 200px;
+    grid-column: 2/6;
+    background-color: yellow;
+}
+
+.main-page-resume {
+    margin-top: 40px;
+    grid-column: 5/7;
+    background-color: magenta;
+}
+
+table {
+    width: 716px;
+    border-spacing: 0;
+}
+
+tbody,
+thead tr {
+    display: block;
+}
+
+tbody {
+    height: 300px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+tbody td,
+thead th {
+    width: 140px;
+}
+
+thead th:last-child {
+    width: 156px;
+}
