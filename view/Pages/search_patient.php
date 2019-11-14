@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="view/Styles/style.css">
     <title>Seja bem vindo</title>
 </head>
@@ -23,7 +24,7 @@
 
         <div class="page-content">
             <div class="main-page-charts">
-                <p>asd</p>
+                <input type="text" id="termo" name="termo">
             </div>
 
             <div class="main-page-resume">
@@ -31,7 +32,17 @@
             </div>
 
             <div class="main-page-charts">
+                <table style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nome</th>
+                    </tr>
+                    </thead>
+                    <tbody id="lista" name="lista">
 
+                    </tbody>
+                </table>
             </div>
 
             <div class="main-page-resume">
@@ -41,6 +52,7 @@
         </div>
 
     </div>
+    <script src="view/scripts/search.js"></script>
 </body>
 
 </html>

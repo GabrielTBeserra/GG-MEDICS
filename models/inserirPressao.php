@@ -1,10 +1,10 @@
 <?php
 
 
-$data = $_POST['data'];
-$horario = $_POST['horario'];
-$sistolico = $_POST['sistolico'];
-$diastolico = $_POST['diastolico'];
+$data = $_POST['data_press'];
+$horario = $_POST['horario_press'];
+$sistolico = $_POST['sistolico_press'];
+$diastolico = $_POST['diastolico_press'];
 
 $dateStr = $data . " " . $horario;
 

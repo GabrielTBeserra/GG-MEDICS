@@ -37,7 +37,7 @@ class SingIn
                 $_SESSION['tipo'] = $row['tipo'];
 
 
-                if ($row['tipo'] == "Medico") {
+                if ($row['tipo'] == "medico") {
                     $_SESSION['isMedic'] = 'true';
                     $this->getMedic($conn, $row['idUsuario']);
                 } else {

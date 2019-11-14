@@ -28,8 +28,8 @@
                 <br />
                 <label>Sexo</label>
                 <br />
-                <input type="radio" name="sexo" value="m">Masculino<br>
-                <input type="radio" name="sexo" value="f">Feminino<br>
+                <input type="radio" name="sexo" value="M">Masculino<br>
+                <input type="radio" name="sexo" value="F">Feminino<br>
 
                 <br />
                 <label for="medic">Medico ?</label>

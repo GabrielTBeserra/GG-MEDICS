@@ -49,9 +49,9 @@ class SingUp
     public function register()
     {
         if ($this->isMedic) {
-            new InsertMedic($this->nome, $this->sexo, $this->password, $this->email, 'Medico', $this->cpf);
+            new InsertMedic($this->nome, $this->sexo, $this->password, $this->email, 'medico', $this->cpf);
         } else {
-            new InsertPacient($this->nome,  $this->sexo, $this->password, $this->email, 'Paciente', $this->cpf, $this->dataNasc, $this->tipoDiabete, $this->hipertenso);
+            new InsertPacient($this->nome,  $this->sexo, $this->password, $this->email, 'paciente', $this->cpf, $this->dataNasc, $this->tipoDiabete, $this->hipertenso);
         }
     }
 }

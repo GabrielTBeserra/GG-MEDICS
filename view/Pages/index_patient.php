@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="view/Styles/style.css">
     <title>Seja bem vindo</title>
@@ -58,35 +59,37 @@
 
             <div class="main-page-charts">
                 <h4>Inserir nova diabete</h4>
-                <form method="post" action="models/inserirDiabete.php">
-                    <label for="valor">Valor da diabete</label>
-                    <input type="number" id="valor" name="valor">
-                    <label for="data">Data da Medicao</label>
-                    <input type="date" id="data" name="data">
-                    <label for="horario">Hora de medicao</label>
-                    <input type="time" id="horario" name="horario">
-                    <button>Inserir</button>
+                <form method="post" action="models/inserirDiabete.php" onsubmit="return validate_diabetes();">
+                    <label for="valor_dia">Valor da diabete</label>
+                    <input type="number" id="valor_dia" name="valor_dia">
+                    <label for="data_dia">Data da Medicao</label>
+                    <input type="date" id="data_dia" name="data_dia">
+                    <label for="horario_dia">Hora de medicao</label>
+                    <input type="time" id="horario_dia" name="horario_dia">
+                    <button type="submit">Inserir</button>
                 </form>
             </div>
 
             <div class="main-page-resume">
                 <h4>Inserir nova pressao</h4>
-                <form method="post" action="models/inserirPressao.php">
-                    <label for="sistolico">Valor Sistolico</label>
-                    <input type="number" id="sistolico" name="sistolico">
-                    <label for="diastolico">Valor Diastolico</label>
-                    <input type="number" id="diastolico" name="diastolico">
+                <form method="post" action="models/inserirPressao.php" onsubmit="return validate_pressao();">
+                    <label for="sistolico_press">Valor Sistolico</label>
+                    <input type="number" id="sistolico_press" name="sistolico_press">
+                    <label for="diastolico_press">Valor Diastolico</label>
+                    <input type="number" id="diastolico_press" name="diastolico_press">
                     <label for="data">Data da Medicao</label>
-                    <input type="date" id="data" name="data">
+                    <input type="date_press" id="data_press" name="data_press">
                     <label for="horario">Hora de medicao</label>
-                    <input type="time" id="horario" name="horario">
-                    <button>Inserir</button>
+                    <input type="time" id="horario_press" name="horario_press">
+                    <button type="submit">Inserir</button>
                 </form>
             </div>
 
         </div>
 
     </div>
+
+    <script src="view/scripts/validation.js"></script>
 </body>
 
 </html>
