@@ -5,7 +5,8 @@ require_once 'ConnectionDB.php';
 
 
 
-class ListaAcom{
+class ListaAcom
+{
     private $idMed;
     private $connection;
 
@@ -21,7 +22,8 @@ class ListaAcom{
         }
     }
 
-    public function lista(){
+    public function lista()
+    {
 
 
         $query = "SELECT * FROM acompanhamento where idMedico = '$this->idMed'";
@@ -39,22 +41,17 @@ class ListaAcom{
                 $query2 = "SELECT u.idUsuario , u.nome, p.cpfPaciente FROM usuario u , paciente p where (u.idUsuario = '$idUs') AND (p.idUsuario = '$idUs')";
                 $result2 = $this->connection->query($query2);
 
-                echo $query2;
+
 
                 if ($result2) {
                     while ($row2 = $result2->fetch_assoc()) {
                         $item = file_get_contents('view/Pages/acom_item.html');
-                        $item = str_replace('#{acom.id}',$idUs, $item);
+                        $item = str_replace('#{acom.id}', $idUs, $item);
                         $item = str_replace('#{acom.nome}', $row2['nome'], $item);
                         $item = str_replace('#{acom.cpf}', $row2['cpfPaciente'], $item);
                         $items .= $item;
                     }
                 }
-
-
-
-
-
             }
         }
 

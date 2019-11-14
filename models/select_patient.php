@@ -27,9 +27,7 @@ class ListaPacientes
             exit();
         }
 
-        $result = $this->connection->query("SELECT u.idUsuario , u.nome FROM usuario u where (u.idUsuario like '$this->termo' OR LOWER(u.nome) like '$this->termo') AND tipo like 'paciente'");
-
-
+        $result = $this->connection->query("SELECT u.idUsuario , u.nome , p.cpfPaciente FROM usuario u , paciente p where (u.idUsuario like '$this->termo' OR LOWER(u.nome) like '$this->termo') AND (tipo like 'paciente') and ((select count(*) from acompanhamento where idPaciente = u.idUsuario) = 0) AND p.idUsuario = u.idUsuario");
 
 
         $rows = [];
@@ -40,7 +38,7 @@ class ListaPacientes
             }
         }
 
-        //print_r($rows);
+       // print_r($rows);
         echo json_encode($rows);
 
         $this->connection->close();

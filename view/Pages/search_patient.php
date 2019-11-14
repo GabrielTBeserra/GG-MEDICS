@@ -37,10 +37,12 @@
             <div class="main-page-charts">
                 <table style="width:100%">
                     <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>nome</th>
-                    </tr>
+                        <tr>
+                            <th>id</th>
+                            <th>nome</th>
+                            <th>cpf</th>
+                            <th></th>
+                        </tr>
                     </thead>
                     <tbody id="lista" name="lista">
 

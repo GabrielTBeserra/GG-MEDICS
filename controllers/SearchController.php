@@ -11,7 +11,7 @@ class SearchController
     {
         if($_SESSION['isMedic'] == "true"){
             $search = new SearchIndex();
-            $search->render();
+            $search->render($_SESSION);
         } else {
             header("location: /Web");
         }

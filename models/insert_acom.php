@@ -7,15 +7,16 @@ session_start();
 $idPat = $_POST['idPat'];
 
 
-$insertNew = new InsertAcom($idPat , $_SESSION['idUser']);
+$insertNew = new InsertAcom($idPat, $_SESSION['idUser']);
 $insertNew->insert();
 
-class InsertAcom{
+class InsertAcom
+{
     private $connection;
     private $idPat;
     private $idMed;
 
-    public function __construct($idPat , $idMed)
+    public function __construct($idPat, $idMed)
     {
         $this->idMed = $idMed;
         $this->idPat = $idPat;
@@ -27,13 +28,12 @@ class InsertAcom{
         }
     }
 
-    public function insert(){
+    public function insert()
+    {
         if (!$this->connection->query("INSERT INTO acompanhamento (idMedico , idPaciente) VALUES ('$this->idMed' , '$this->idPat')")) {
             echo $this->connection->error;
         }
 
         $this->connection->close();
-
     }
-
 }

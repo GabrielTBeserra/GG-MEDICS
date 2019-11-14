@@ -70,21 +70,27 @@ function populate_table(list) {
         let td1 = document.createElement("td");
         let td2 = document.createElement("td");
         let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+
         let userId = document.createTextNode(data.idUsuario);
         let nome = document.createTextNode(data.nome);
+        let cpf = document.createTextNode(data.cpfPaciente);
         let Buttonname = document.createTextNode("Acompanhar");
         let button = document.createElement("button");
         button.appendChild(Buttonname);
-        button.setAttribute("id" , data.idUsuario);
-        button.setAttribute("name" , data.idUsuario);
-        button.setAttribute("onclick" , "acompanhar( "+ data.idUsuario +")");
+        button.setAttribute("id", data.idUsuario);
+        button.setAttribute("name", data.idUsuario);
+        button.setAttribute("onclick", "acompanhar( " + data.idUsuario + ")");
 
 
         td1.appendChild(userId);
         td2.appendChild(nome);
         td3.appendChild(button);
+        td4.appendChild(cpf);
         tr.appendChild(td1);
         tr.appendChild(td2);
+
+        tr.appendChild(td4);
         tr.appendChild(td3);
         table.appendChild(tr);
 
