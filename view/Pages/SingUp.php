@@ -16,7 +16,7 @@
                 <input id="data" class="input-form" name="data" type="date">
                 <br />
                 <select name="tipoDiabete">
-                    <option value="nao" selected>Nao diabetico</option>
+                    <option value="4" selected>Nao diabetico</option>
                     <option value="1">Tipo 1</option>
                     <option value="2">Tipo 2</option>
                     <option value="3">Gestacional</option>

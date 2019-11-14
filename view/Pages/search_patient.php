@@ -20,6 +20,9 @@
                     <li><a href="/Web/search.php">Buscar</a></li>
                 </ul>
             </nav>
+            <div class="logged-info">
+                <p>Ola #{nome.paciente}! <a href="controllers/logout.php">Logout</a></p>
+            </div>
         </div>
 
         <div class="page-content">

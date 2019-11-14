@@ -19,11 +19,26 @@
                     <li><a href="/Web/search.php">Buscar</a></li>
                 </ul>
             </nav>
+            <div class="logged-info">
+                <p>Ola #{nome.paciente}! <a href="controllers/logout.php">Logout</a></p>
+            </div>
         </div>
 
         <div class="page-content">
             <div class="main-page-charts">
-                <p>asd</p>
+                <table style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    #{itens.acom}
+                    </tbody>
+                </table>
+
             </div>
 
             <div class="main-page-resume">
