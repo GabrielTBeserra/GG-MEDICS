@@ -31,6 +31,8 @@ $("#termo").keyup(function() {
     }).always(function() {
         console.log("completou");
     });
+
+
 });
 
 
@@ -80,7 +82,7 @@ function populate_table(list) {
         button.appendChild(Buttonname);
         button.setAttribute("id", data.idUsuario);
         button.setAttribute("name", data.idUsuario);
-        button.setAttribute("onclick", "acompanhar( " + data.idUsuario + ")");
+        button.setAttribute("onclick", "acompanhar(" + data.idUsuario + ")");
 
 
         td1.appendChild(userId);
@@ -94,9 +96,32 @@ function populate_table(list) {
         tr.appendChild(td3);
         table.appendChild(tr);
 
+
     });
 
 
+}
+
+function reload() {
+    $.ajax({
+        url: "models/select_patient.php",
+        type: "POST",
+        data: {
+            termo: "%%"
+        },
+        dataType: "html"
+
+    }).done(function(resposta) {
+        let jsonList = JSON.parse(resposta);
+        populate_table(jsonList);
+
+
+    }).fail(function(jqXHR, textStatus) {
+        console.log("Request failed: " + textStatus);
+
+    }).always(function() {
+        console.log("completou");
+    });
 }
 
 function acompanhar(id) {
@@ -110,12 +135,12 @@ function acompanhar(id) {
 
     }).done(function(resposta) {
         console.log(resposta);
-
-
     }).fail(function(jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
 
     }).always(function() {
         console.log("completou");
     });
+
+    reload();
 }
