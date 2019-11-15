@@ -42,7 +42,9 @@
                 <input id="cpf" class="input-form" name="cpf" type="text" required>
                 <label for="file-name">Senha</label>
                 <input id="password" class="input-form" name="password" type="password" required>
-                <button type="button" onclick="singup();" class="submit-button-cad">Cadastrar</button>
+                <div class="buttons">
+                    <button type="button" onclick="singup();" class="submit-button-cad">Cadastrar</button>
+                </div>
             </form>
         </div>
     </section>

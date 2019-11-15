@@ -19,7 +19,7 @@
                 <input id="password" class="input-form" name="password" type="password" required>
                 <div class="buttons">
                     <a class="singup-button" href="singup.php">Cadastre-se</a>
-                    <button type="button" onclick="singin();" class="submit-button">Entrar</button>
+                    <button type="button" onclick="singin();" class="login-button">Entrar</button>
                 </div>
             </form>
         </div>

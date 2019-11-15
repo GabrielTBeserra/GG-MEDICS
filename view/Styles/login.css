@@ -75,21 +75,21 @@ form .form-new input {
     outline-color: #7159c1;
 }
 
-form .submit-button:hover {
-    background-color: rgb(24, 179, 70);
+form .login-button:hover {
+    background-color: #2b77b9;
 }
 
-form .submit-button:active {
-    background-color: rgb(13, 112, 43);
+form .login-button:active {
+    background-color: #135792;
 }
 
 form .singup-button:hover {
-    background-color: rgb(192, 38, 24);
+    background-color: #b43d39;
     ;
 }
 
 form .singup-button:active {
-    background-color: rgb(138, 25, 14);
+    background-color: #9b2e2a;
     ;
 }
 
@@ -105,39 +105,12 @@ form .submit-button {
     padding-left: 100px;
 }
 
-.submit-button-cad {
-    display: inline-block;
-    border: none;
-    background-color: #428bca;
-    color: white;
-    width: 100%;
-    border-radius: 25px;
-    margin: 15px;
-    padding: 9px;
-    padding-right: 110px;
-    padding-left: 100px;
-}
-
 .submit-button-cad:hover {
     background-color: #2b77b9;
 }
 
 .submit-button-cad:active {
     background-color: #135792;
-}
-
-form .singup-button {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    border: none;
-    background-color: #E02F1F;
-    color: white;
-    border-radius: 25px;
-    margin: auto;
-    padding: 7px;
-    padding-right: 80px;
-    padding-left: 80px;
 }
 
 .input-form-radio {
@@ -161,4 +134,46 @@ form .singup-button {
 
 .select-diabete {
     display: inline-block;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.submit-button-cad {
+    cursor: pointer;
+    grid-column: 1/5;
+    border: none;
+    background-color: #428bca;
+    color: white;
+    width: 100%;
+    border-radius: 25px;
+    padding: 9px;
+    padding-right: 110px;
+    padding-left: 100px;
+}
+
+.login-button {
+    cursor: pointer;
+    grid-column: 3/5;
+    border: none;
+    background-color: #428bca;
+    color: white;
+    border-radius: 25px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.singup-button {
+    grid-column: 1/3;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
