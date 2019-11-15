@@ -49,8 +49,7 @@ form .form-new input {
     outline-color: #7159c1;
 }
 
-form .edit-button,
-form .submit-button {
+.as {
     display: block;
     min-width: 120px;
     border: none;
@@ -61,6 +60,50 @@ form .submit-button {
     padding: 9px;
     padding-right: 150px;
     padding-left: 150px;
+}
+
+form .submit-button:hover {
+    background-color: rgb(24, 179, 70);
+}
+
+form .submit-button:active {
+    background-color: rgb(13, 112, 43);
+}
+
+form .singup-button:hover {
+    background-color: rgb(192, 38, 24);
+    ;
+}
+
+form .singup-button:active {
+    background-color: rgb(138, 25, 14);
+    ;
+}
+
+form .submit-button {
+    display: inline-block;
+    border: none;
+    background-color: rgb(31, 224, 89);
+    color: white;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 9px;
+    padding-right: 110px;
+    padding-left: 100px;
+}
+
+form .singup-button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #E02F1F;
+    color: white;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+    padding-right: 80px;
+    padding-left: 80px;
 }
 
 .input-form-radio {

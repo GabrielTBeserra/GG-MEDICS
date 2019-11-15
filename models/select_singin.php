@@ -49,7 +49,9 @@ class SingIn
                     $this->getPacient($conn, $row['idUsuario']);
                 }
 
-                print_r($row);
+                //print_r($row);
+
+                print "true";
             }
         }
 
@@ -58,7 +60,9 @@ class SingIn
 
 
         $conn->close();
-        header("Location: /Web");
+
+
+        //header("Location: /Web");
     }
 
     private function getMedic($conn, $id)
@@ -73,7 +77,7 @@ class SingIn
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 $_SESSION['crm'] = $row['crm'];
-                print_r($row);
+                //print_r($row);
             }
         }
     }
