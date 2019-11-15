@@ -1,4 +1,7 @@
 <?php
+
+require_once 'ConnectionDB.php';
+
 class ListaPressao
 {
     private $id;
@@ -9,7 +12,8 @@ class ListaPressao
 
     public function lista()
     {
-        $conn = mysqli_connect('127.0.0.1', 'root', '', 'web');
+        $conns = new Connection();
+        $conn = $conns->db();
         // Check connection
         if ($conn->connect_errno) {
             echo "Failed to connect to MySQL: " . $conn->connect_error();

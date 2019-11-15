@@ -78,7 +78,7 @@
                     <label for="diastolico_press">Valor Diastolico</label>
                     <input type="number" id="diastolico_press" name="diastolico_press">
                     <label for="data">Data da Medicao</label>
-                    <input type="date_press" id="data_press" name="data_press">
+                    <input type="date" id="data_press" name="data_press">
                     <label for="horario">Hora de medicao</label>
                     <input type="time" id="horario_press" name="horario_press">
                     <button type="submit">Inserir</button>

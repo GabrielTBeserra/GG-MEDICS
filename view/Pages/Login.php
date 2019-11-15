@@ -8,7 +8,7 @@
     <section>
         <div class="form-new">
             <form method="POST" action="controllers/LoginController.php">
-                <label for="client-code">Usuario</label>
+                <label for="client-code">Email</label>
                 <input id="user" class="input-form" name="user" type="text" required>
                 <br />
                 <label for="file-name">Senha</label>

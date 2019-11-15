@@ -8,7 +8,6 @@ body {
 }
 
 .main-content {
-    background-color: red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -53,13 +52,18 @@ body {
     grid-column: 1/8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-color: green;
 }
 
 .main-page-charts {
     margin-top: 40px;
     grid-column: 2/4;
     background-color: yellow;
+}
+
+.search-page {
+    margin-top: 40px;
+    grid-column: 2/7;
+    background-color: white;
 }
 
 .profile-infos {
@@ -77,12 +81,13 @@ body {
 
 table {
     width: 716px;
+    display: inline-block;
     border-spacing: 0;
 }
 
 tbody,
 thead tr {
-    display: block;
+    width: 100%;
 }
 
 tbody {
@@ -92,9 +97,18 @@ tbody {
     overflow-x: hidden;
 }
 
-tbody td,
+tbody td {
+    height: 30px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
 thead th {
-    width: 140px;
+    background-color: rgb(179, 179, 179);
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
 }
 
 thead th:last-child {

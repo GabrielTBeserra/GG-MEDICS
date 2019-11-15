@@ -26,21 +26,20 @@
         </div>
 
         <div class="page-content">
-            <div class="main-page-charts">
+            <div class="search-page">
+                <label for="termo">Termo de busca (id ou nome)</label>
                 <input type="text" id="termo" name="termo">
             </div>
 
-            <div class="main-page-resume">
 
-            </div>
 
-            <div class="main-page-charts">
+            <div class="search-page">
                 <table style="width:100%">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>nome</th>
-                            <th>cpf</th>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>CPF</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -50,9 +49,7 @@
                 </table>
             </div>
 
-            <div class="main-page-resume">
 
-            </div>
 
         </div>
 

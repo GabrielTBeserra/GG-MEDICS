@@ -1,5 +1,7 @@
 <?php
 
+require_once 'ConnectionDB.php';
+
 
 $data = $_POST['data_press'];
 $horario = $_POST['horario_press'];
@@ -24,9 +26,11 @@ new InserirPressao($datetime, $sistolico, $diastolico, $_SESSION['idUser']);
 
 class InserirPressao
 {
+    private $connection;
     public function __construct($data, $sis, $dias, $id)
     {
-        $conn = mysqli_connect("localhost", "root", "", "web");
+        $conn = new Connection();
+        $this->connection = $conn->db();
 
         if (mysqli_connect_errno()) {
             echo "Connect failed: %s\n" . mysqli_connect_error();
@@ -34,13 +38,13 @@ class InserirPressao
         }
 
 
-        if (!$conn->query("INSERT INTO pressao (idPaciente , valorSistolico , valorDiastolico , dataMedicao) VALUES ('$id' , '$sis' , '$dias' , '$data')")) {
-            echo $conn->error;
+        if (!$this->connection->query("INSERT INTO pressao (idPaciente , valorSistolico , valorDiastolico , dataMedicao) VALUES ('$id' , '$sis' , '$dias' , '$data')")) {
+            echo $this->connection->error;
         };
 
 
 
-        $conn->close();
+        $this->connection->close();
         header("location: /Web");
     }
 }

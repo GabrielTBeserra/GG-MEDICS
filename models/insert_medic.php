@@ -1,11 +1,13 @@
 <?php
 
+require_once 'ConnectionDB.php';
 
 class InsertMedic
 {
     public function __construct($nome, $sexo, $senha, $email, $tipo, $crm)
     {
-        $conn = mysqli_connect("localhost", "root", "", "web");
+        $conns = new Connection();
+        $conn = $conns->db();
 
         if (mysqli_connect_errno()) {
             echo "Connect failed: %s\n" . mysqli_connect_error();
