@@ -28,11 +28,16 @@ form {
     border-radius: 5px;
 }
 
+.form-new {
+    width: 50%;
+}
+
 form .form-new {
     margin-bottom: 20px;
 }
 
 form .form-new label {
+    margin-top: 5px;
     font-size: 14px;
     color: darkslateblue;
 }
@@ -40,7 +45,7 @@ form .form-new label {
 form .form-new input {
     width: 100%;
     display: block;
-    margin-top: 8px;
+    margin-top: 15px;
     padding: 7px;
     font-size: 16px;
     color: #7159c1;
@@ -49,17 +54,25 @@ form .form-new input {
     outline-color: #7159c1;
 }
 
-.as {
+.input-form-rad {
+    margin: 8px;
+    padding: 7px;
+    font-size: 16px;
+    color: #7159c1;
+    border-radius: 2px;
+    border: 1px solid #ccddef;
+    outline-color: #7159c1;
+}
+
+.input-form-ch {
     display: block;
-    min-width: 120px;
-    border: none;
-    background-color: #E02F1F;
-    color: white;
-    border-radius: 25px;
-    margin: auto;
-    padding: 9px;
-    padding-right: 150px;
-    padding-left: 150px;
+    margin: 15px;
+    padding: 7px;
+    font-size: 16px;
+    color: #7159c1;
+    border-radius: 2px;
+    border: 1px solid #ccddef;
+    outline-color: #7159c1;
 }
 
 form .submit-button:hover {
@@ -92,6 +105,27 @@ form .submit-button {
     padding-left: 100px;
 }
 
+.submit-button-cad {
+    display: inline-block;
+    border: none;
+    background-color: #428bca;
+    color: white;
+    width: 100%;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 9px;
+    padding-right: 110px;
+    padding-left: 100px;
+}
+
+.submit-button-cad:hover {
+    background-color: #2b77b9;
+}
+
+.submit-button-cad:active {
+    background-color: #135792;
+}
+
 form .singup-button {
     display: inline-block;
     text-decoration: none;
@@ -112,7 +146,6 @@ form .singup-button {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    float: left;
     box-sizing: border-box;
 }
 
@@ -124,4 +157,8 @@ form .singup-button {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.select-diabete {
+    display: inline-block;
 }

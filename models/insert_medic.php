@@ -23,7 +23,5 @@ class InsertMedic
         };
 
         $conn->close();
-
-        header("Location: /Web");
     }
 }

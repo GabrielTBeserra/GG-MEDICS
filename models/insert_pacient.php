@@ -14,16 +14,17 @@ class InsertPacient
             exit();
         }
 
+
+
+
         if ($conn->query("INSERT INTO usuario (nome , sexo , senha , email , tipo) VALUES ('$nome', '$sexo', '$senha', '$email', '$tipo')")) {
             if (!$conn->query("INSERT INTO paciente (idUsuario , cpfPaciente , dataNascimento , tipoDiabete , hipertenso) VALUES ('$conn->insert_id', '$cpf', '$dataNasc' , '$tipoDia' , '$hiper')")) {
-                echo $conn->error;
+                echo $conn->errno;
             };
         } else {
-            echo $conn->error;
+            echo $conn->errno;
         };
 
         $conn->close();
-
-        header("Location: /Web");
     }
 }
