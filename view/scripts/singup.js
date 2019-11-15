@@ -33,9 +33,6 @@ function singup() {
     const tipoDiabete = document.querySelector("#tipoDiabete").value;
 
 
-
-
-
     if (isMedic === true) {
         if (nome.trim() == "" || email.trim() == "" || password.trim() == "" || sexo == "") {
             preencha();
@@ -47,6 +44,7 @@ function singup() {
             return;
         };
     }
+
 
     $.ajax({
         url: "controllers/SingUp.php",
@@ -65,6 +63,7 @@ function singup() {
         dataType: "html"
 
     }).done(function(resposta) {
+        console.log(resposta);
         if (resposta === "") {
             alert("Cadastrado com sucesso!");
             location.href = "/Web";

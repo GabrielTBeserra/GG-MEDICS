@@ -51,7 +51,7 @@ class SingIn
 
                 //print_r($row);
 
-                print "true";
+                echo "true";
             }
         }
 
@@ -83,13 +83,12 @@ class SingIn
     }
     private function getPacient($conn, $id)
     {
-        session_start();
         $query = "SELECT * FROM paciente where idUsuario = '$id'";
 
         $result = $conn->query($query);
         echo $conn->error;
 
-        echo mysqli_num_rows($result);
+        // echo mysqli_num_rows($result);
 
 
         if ($result) {

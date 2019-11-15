@@ -12,8 +12,9 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $cpf = $_POST['cpf'];
 $password = $_POST['password'];
-$medic = isset($_POST['medic']) ? true : false;
-$dataNasc = isset($_POST['data']) ? $_POST['data'] : false;
+$medic = $_POST['medic'];
+$dataNasc = $_POST['data'];
+
 
 
 $newRegister = new SingUp($name, $email, $cpf, $password, $medic, $dataNasc, $sexo, $tipoDiabete, $hipertenso);
@@ -48,7 +49,7 @@ class SingUp
 
     public function register()
     {
-        if ($this->isMedic) {
+        if ($this->isMedic == "true") {
             new InsertMedic($this->nome, $this->sexo, $this->password, $this->email, 'medico', $this->cpf);
         } else {
             new InsertPacient($this->nome,  $this->sexo, $this->password, $this->email, 'paciente', $this->cpf, $this->dataNasc, $this->tipoDiabete, $this->hipertenso);

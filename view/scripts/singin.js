@@ -21,10 +21,13 @@ function singin() {
         dataType: "html"
 
     }).done(function(resposta) {
+
+        console.log(resposta);
+
         if (resposta === "true") {
+            location.href = "/Web";
             location.reload();
         } else {
-
             incorrect();
         }
 
