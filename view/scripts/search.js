@@ -21,6 +21,7 @@ $("#termo").keyup(function() {
         dataType: "html"
 
     }).done(function(resposta) {
+        console.log(resposta);
         let jsonList = JSON.parse(resposta);
         populate_table(jsonList);
 
@@ -47,6 +48,7 @@ $(document).ready(function() {
         dataType: "html"
 
     }).done(function(resposta) {
+        console.log(resposta);
         let jsonList = JSON.parse(resposta);
         populate_table(jsonList);
 
@@ -112,6 +114,7 @@ function reload() {
         dataType: "html"
 
     }).done(function(resposta) {
+        console.log(resposta);
         let jsonList = JSON.parse(resposta);
         populate_table(jsonList);
 
