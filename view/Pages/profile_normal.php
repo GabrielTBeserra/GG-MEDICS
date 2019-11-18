@@ -34,9 +34,6 @@
                 <input id="cpf" type="text" name="cpf" value="#{cpf.paciente}" readonly>
                 <label for="sexo">Sexo</label>
                 <input id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
-
-
-
                 <label for="dataNasc">Data Nascimento</label>
                 <input id="dataNasc" type="date" name="dataNasc" value="#{dataNasc.paciente}">
             </div>
