@@ -8,9 +8,6 @@ $password = $_POST['password'];
 
 $auth = new Auth($user, $password);
 
-
-
-
 class Auth
 {
     private $user;

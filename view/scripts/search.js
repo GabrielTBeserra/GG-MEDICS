@@ -1,4 +1,4 @@
-$("#termo").keyup(function() {
+$("#termo").keyup(function () {
 
     var termo = document.querySelector("#termo").value;
 
@@ -13,23 +13,23 @@ $("#termo").keyup(function() {
 
 
     $.ajax({
-        url: "models/select_patient.php",
+        url: "controllers/SelectPatient.php",
         type: "POST",
         data: {
             termo: termo
         },
         dataType: "html"
 
-    }).done(function(resposta) {
+    }).done(function (resposta) {
         console.log(resposta);
         let jsonList = JSON.parse(resposta);
         populate_table(jsonList);
 
 
-    }).fail(function(jqXHR, textStatus) {
+    }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
 
-    }).always(function() {
+    }).always(function () {
         console.log("completou");
     });
 
@@ -37,26 +37,26 @@ $("#termo").keyup(function() {
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     $.ajax({
-        url: "models/select_patient.php",
+        url: "controllers/SelectPatient.php",
         type: "POST",
         data: {
             termo: "%%"
         },
         dataType: "html"
 
-    }).done(function(resposta) {
+    }).done(function (resposta) {
         console.log(resposta);
         let jsonList = JSON.parse(resposta);
         populate_table(jsonList);
 
 
-    }).fail(function(jqXHR, textStatus) {
+    }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
 
-    }).always(function() {
+    }).always(function () {
         console.log("completou");
     });
 
@@ -69,7 +69,7 @@ function populate_table(list) {
 
     table.innerHTML = '';
 
-    list.forEach(function(data, index) {
+    list.forEach(function (data, index) {
         let tr = document.createElement("tr");
         let td1 = document.createElement("td");
         let td2 = document.createElement("td");
@@ -106,42 +106,42 @@ function populate_table(list) {
 
 function reload() {
     $.ajax({
-        url: "models/select_patient.php",
+        url: "controllers/SelectPatient.php",
         type: "POST",
         data: {
             termo: "%%"
         },
         dataType: "html"
 
-    }).done(function(resposta) {
+    }).done(function (resposta) {
         console.log(resposta);
         let jsonList = JSON.parse(resposta);
         populate_table(jsonList);
 
 
-    }).fail(function(jqXHR, textStatus) {
+    }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
 
-    }).always(function() {
+    }).always(function () {
         console.log("completou");
     });
 }
 
 function acompanhar(id) {
     $.ajax({
-        url: "models/insert_acom.php",
+        url: "controllers/InserirAcompanhante.php",
         type: "POST",
         data: {
             idPat: id
         },
         dataType: "html"
 
-    }).done(function(resposta) {
+    }).done(function (resposta) {
         console.log(resposta);
-    }).fail(function(jqXHR, textStatus) {
+    }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
 
-    }).always(function() {
+    }).always(function () {
         console.log("completou");
     });
 

@@ -2,6 +2,7 @@
 
 require_once 'view/SingUp.php';
 
+
 class SingUpController
 {
     public function index()

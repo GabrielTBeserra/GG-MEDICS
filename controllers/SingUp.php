@@ -1,6 +1,6 @@
 <?php
 
-require_once '../models/insert_pacient.php';
+require_once '../models/Patient.php';
 require_once '../models/insert_medic.php';
 
 
@@ -50,9 +50,11 @@ class SingUp
     public function register()
     {
         if ($this->isMedic == "true") {
+            
             new InsertMedic($this->nome, $this->sexo, $this->password, $this->email, 'medico', $this->cpf);
         } else {
-            new InsertPacient($this->nome,  $this->sexo, $this->password, $this->email, 'paciente', $this->cpf, $this->dataNasc, $this->tipoDiabete, $this->hipertenso);
+            $newPat = new Patient();
+            $newPat->inserir($this->nome,  $this->sexo, $this->password, $this->email, 'paciente', $this->cpf, $this->dataNasc, $this->tipoDiabete, $this->hipertenso);
         }
     }
 }

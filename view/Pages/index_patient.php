@@ -59,7 +59,7 @@
 
             <div class="main-page-charts">
                 <h4>Inserir nova diabete</h4>
-                <form method="post" action="models/inserirDiabete.php" onsubmit="return validate_diabetes();">
+                <form method="post" action="controllers/InserirDiabetes.php" onsubmit="return validate_diabetes();">
                     <label for="valor_dia">Valor da diabete</label>
                     <input type="number" id="valor_dia" name="valor_dia">
                     <label for="data_dia">Data da Medicao</label>
@@ -72,7 +72,7 @@
 
             <div class="main-page-resume">
                 <h4>Inserir nova pressao</h4>
-                <form method="post" action="models/inserirPressao.php" onsubmit="return validate_pressao();">
+                <form method="post" action="controllers/InserirPressao.php" onsubmit="return validate_pressao();">
                     <label for="sistolico_press">Valor Sistolico</label>
                     <input type="number" id="sistolico_press" name="sistolico_press">
                     <label for="diastolico_press">Valor Diastolico</label>

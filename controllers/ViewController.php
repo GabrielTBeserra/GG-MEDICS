@@ -4,6 +4,9 @@ require_once 'view/ViewProfile.php';
 
 session_start();
 
+
+// Responsavel em carregar o perfil de um paciente em que o medico acompanha
+
 class View
 {
     private $id;

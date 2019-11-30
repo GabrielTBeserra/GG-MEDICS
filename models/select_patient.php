@@ -2,13 +2,6 @@
 
 require_once 'ConnectionDB.php';
 
-session_start();
-
-$termo = $_POST['termo'];
-$idMed = $_SESSION['idUser'];
-
-$search = new ListaPacientes($termo, $idMed);
-$search->search();
 
 class ListaPacientes
 {
