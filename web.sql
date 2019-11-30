@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2019 às 21:46
--- Versão do servidor: 10.4.6-MariaDB
--- versão do PHP: 7.3.9
+-- Host: localhost
+-- Tempo de geração: 30-Nov-2019 às 22:45
+-- Versão do servidor: 10.4.8-MariaDB
+-- versão do PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,6 +30,7 @@ USE `web`;
 -- Estrutura da tabela `acompanhamento`
 --
 
+DROP TABLE IF EXISTS `acompanhamento`;
 CREATE TABLE `acompanhamento` (
   `idAcompanhamento` int(11) NOT NULL,
   `idMedico` int(11) NOT NULL,
@@ -43,6 +44,7 @@ CREATE TABLE `acompanhamento` (
 -- Estrutura da tabela `diabetes`
 --
 
+DROP TABLE IF EXISTS `diabetes`;
 CREATE TABLE `diabetes` (
   `idDiabete` int(11) NOT NULL,
   `idPaciente` int(11) DEFAULT NULL,
@@ -57,6 +59,7 @@ CREATE TABLE `diabetes` (
 -- Estrutura da tabela `logs`
 --
 
+DROP TABLE IF EXISTS `logs`;
 CREATE TABLE `logs` (
   `logId` int(11) NOT NULL,
   `data` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -70,6 +73,7 @@ CREATE TABLE `logs` (
 -- Estrutura da tabela `medico`
 --
 
+DROP TABLE IF EXISTS `medico`;
 CREATE TABLE `medico` (
   `idUsuario` int(11) NOT NULL,
   `crm` varchar(15) NOT NULL
@@ -81,6 +85,7 @@ CREATE TABLE `medico` (
 -- Estrutura da tabela `paciente`
 --
 
+DROP TABLE IF EXISTS `paciente`;
 CREATE TABLE `paciente` (
   `idUsuario` int(11) NOT NULL,
   `cpfPaciente` varchar(14) NOT NULL,
@@ -95,6 +100,7 @@ CREATE TABLE `paciente` (
 -- Estrutura da tabela `pressao`
 --
 
+DROP TABLE IF EXISTS `pressao`;
 CREATE TABLE `pressao` (
   `idPressao` int(11) NOT NULL,
   `idPaciente` int(11) NOT NULL,
@@ -110,10 +116,21 @@ CREATE TABLE `pressao` (
 -- Estrutura da tabela `tiposdiabetes`
 --
 
+DROP TABLE IF EXISTS `tiposdiabetes`;
 CREATE TABLE `tiposdiabetes` (
   `idDiabetes` int(11) NOT NULL,
   `tipoDiabete` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tiposdiabetes`
+--
+
+INSERT INTO `tiposdiabetes` (`idDiabetes`, `tipoDiabete`) VALUES
+(1, 'tipo 1'),
+(2, 'tipo 2'),
+(3, 'gestacional'),
+(4, 'sem diabetes');
 
 -- --------------------------------------------------------
 
@@ -121,6 +138,7 @@ CREATE TABLE `tiposdiabetes` (
 -- Estrutura da tabela `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `idUsuario` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -134,6 +152,7 @@ CREATE TABLE `usuario` (
 --
 -- Acionadores `usuario`
 --
+DROP TRIGGER IF EXISTS `trgupdate_log`;
 DELIMITER $$
 CREATE TRIGGER `trgupdate_log` AFTER INSERT ON `usuario` FOR EACH ROW BEGIN
     insert into logs (acao, tipo) value (concat('Foi inserio um novo usuario com o nome de: ' , NEW.nome , 'e id: ' , NEW.idUsuario) , 'insert');
@@ -233,7 +252,7 @@ ALTER TABLE `pressao`
 -- AUTO_INCREMENT de tabela `tiposdiabetes`
 --
 ALTER TABLE `tiposdiabetes`
-  MODIFY `idDiabetes` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDiabetes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
