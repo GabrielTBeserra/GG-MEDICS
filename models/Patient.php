@@ -61,4 +61,44 @@ Class Patient {
 
         $this->connection->close();
     }
+
+    public function niveisDiabete($id){
+        $query = "SELECT * FROM diabetes where idPaciente = '$id'";
+
+        $result = $this->connection->query($query);
+
+        $rows = [];
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+        }
+
+        //print_r($rows);
+
+        echo json_encode($rows);
+
+        $this->connection->close();
+    }
+
+    public function niveisPressao($id){
+        $query = "SELECT * FROM pressao where idPaciente = '$id'";
+
+        $result = $this->connection->query($query);
+
+        $rows = [];
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+        }
+
+        //print_r($rows);
+
+        echo json_encode($rows);
+
+        $this->connection->close();
+    }
 }

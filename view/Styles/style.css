@@ -56,8 +56,8 @@ body {
 
 .main-page-charts {
     margin-top: 40px;
-    grid-column: 2/4;
-    background-color: yellow;
+    grid-column: 2/7;
+    background-color: white;
 }
 
 .search-page {
