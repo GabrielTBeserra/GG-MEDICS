@@ -72,7 +72,7 @@
     </div>
 
     <script src="view/scripts/validation.js"></script>
-    <script src="view/scripts/niveisDiabetes.js"></script>
+    <script src="view/scripts/Graficos.js"></script>
 </body>
 
 </html>
