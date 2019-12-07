@@ -1,116 +1,132 @@
 * {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-    background-color: #F0F4F5;
+  background-color: #f0f4f5;
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .menu-bar {
-    height: 55px;
-    background-color: #009ABB;
-    grid-column: 1/8;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 55px;
+  background-color: #009abb;
+  grid-column: 1/8;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .menu-bar #menu-itens {
-    text-decoration: none;
-    margin-top: 15px;
-    grid-column: 1/3;
-    list-style: none;
+  text-decoration: none;
+  margin-top: 15px;
+  grid-column: 1/3;
+  list-style: none;
 }
 
 .menu-bar .logged-info {
-    margin-top: 15px;
-    color: white;
-    grid-column: 7/8;
+  margin-top: 15px;
+  color: white;
+  grid-column: 7/8;
 }
 
 .menu-bar .logged-info a {
-    color: black;
+  color: black;
 }
 
 .menu-bar #menu-itens ul li {
-    text-decoration: none;
-    display: inline;
+  text-decoration: none;
+  display: inline;
 }
 
 .menu-bar #menu-itens a {
-    text-decoration: none;
-    padding: 15px;
-    border-radius: 15px;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .page-content {
-    grid-column: 1/8;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column: 1/8;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .main-page-charts {
-    margin-top: 40px;
-    grid-column: 2/7;
-    background-color: white;
+  margin-top: 40px;
+  grid-column: 2/7;
+  background-color: white;
 }
 
 .search-page {
-    margin-top: 40px;
-    grid-column: 2/7;
-    background-color: white;
+  margin-top: 40px;
+  grid-column: 2/7;
+  background-color: white;
 }
 
 .profile-infos {
-    margin-top: 40px;
-    height: 200px;
-    grid-column: 2/6;
-    background-color: yellow;
+  margin-top: 40px;
+  grid-column: 2/7;
+  background-color: white;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.label {
+  grid-column: 1/8;
+}
+
+.input-profile {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 25px;
+  grid-column: 1/8;
+  border-radius: 5px;
+  padding: 3px;
+  border: rgb(0, 140, 255) 1px solid;
 }
 
 .main-page-resume {
-    margin-top: 40px;
-    grid-column: 5/7;
-    background-color: magenta;
+  margin-top: 40px;
+  grid-column: 5/7;
+  background-color: magenta;
 }
 
 table {
-    width: 716px;
-    display: inline-block;
-    border-spacing: 0;
+  width: 716px;
+  display: inline-block;
+  border-spacing: 0;
 }
 
 tbody,
 thead tr {
-    width: 100%;
+  width: 100%;
 }
 
 tbody {
-    height: 300px;
-    position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
+  height: 300px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 tbody td {
-    height: 30px;
-    text-align: center;
-    width: 100%;
-    border: 1px solid black;
+  height: 30px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
 }
 
 thead th {
-    background-color: rgb(179, 179, 179);
-    text-align: center;
-    width: 100%;
-    border: 1px solid black;
+  background-color: rgb(179, 179, 179);
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
 }
 
 thead th:last-child {
-    width: 156px;
+  width: 156px;
 }

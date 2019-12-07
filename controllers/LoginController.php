@@ -5,7 +5,6 @@ require_once '../models/select_singin.php';
 $user = $_POST['user'];
 $password = $_POST['password'];
 
-
 $auth = new Auth($user, $password);
 
 class Auth

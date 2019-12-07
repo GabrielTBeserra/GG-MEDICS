@@ -26,16 +26,20 @@
 
         <div class="page-content">
             <div class="profile-infos">
-                <label for="nome">Nome</label>
-                <input id="nome" type="text" name="nome" value="#{nome.paciente}">
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" value="#{email.paciente}">
-                <label for="cpf">CPF</label>
-                <input id="cpf" type="text" name="cpf" value="#{cpf.paciente}" readonly>
-                <label for="sexo">Sexo</label>
-                <input id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
-                <label for="dataNasc">Data Nascimento</label>
-                <input id="dataNasc" type="date" name="dataNasc" value="#{dataNasc.paciente}">
+                <label class="label" for="nome">Nome</label>
+                <input class="input-profile" id="nome" type="text" name="nome" value="#{nome.paciente}" readonly>
+                <label class="label" for="email">Email</label>
+                <input class="input-profile" id="email" type="email" name="email" value="#{email.paciente}">
+                <label class="label" for="cpf">CPF</label>
+                <input class="input-profile" id="cpf" type="text" name="cpf" value="#{cpf.paciente}" readonly>
+                <label class="label" for="sexo">Sexo</label>
+                <input class="input-profile" id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
+                <label class="label" for="dataNasc">Data Nascimento</label>
+                <input class="input-profile" id="dataNasc" type="date" name="dataNasc" value="#{dataNasc.paciente}" readonly>
+                <label class="label" for="tipo-dia">Tipo de diabetes</label>
+                <input class="input-profile" type="text" name="tipo-dia" id="tipo-dia" value="#{diabete.paciente}">
+                <label class="label" for="hiper">Hipertenso</label>
+                <input class="input-profile" type="text" name="hiper" id="hiper" value="#{hiper.paciente}">
             </div>
         </div>
 
