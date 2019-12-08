@@ -1,10 +1,12 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f0f4f5;
+  background-color: #d5d4d4;
 }
 
 .main-content {
@@ -14,23 +16,24 @@ body {
 
 .menu-bar {
   height: 55px;
-  background-color: #009abb;
+  background-color: #0090c9;
   grid-column: 1/8;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .menu-bar #menu-itens {
+  color: white !important;
   text-decoration: none;
   margin-top: 15px;
-  grid-column: 1/3;
+  grid-column: 2/4;
   list-style: none;
 }
 
 .menu-bar .logged-info {
   margin-top: 15px;
   color: white;
-  grid-column: 7/8;
+  grid-column: 6/8;
 }
 
 .menu-bar .logged-info a {
@@ -40,12 +43,18 @@ body {
 .menu-bar #menu-itens ul li {
   text-decoration: none;
   display: inline;
+  color: white !important;
 }
 
 .menu-bar #menu-itens a {
   text-decoration: none;
   padding: 15px;
   border-radius: 15px;
+  color: white !important;
+}
+
+.menu-bar #menu-itens a:hover {
+  color: blue !important;
 }
 
 .page-content {
@@ -74,16 +83,25 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+.logout-button {
+  text-decoration: none;
+  color: rgb(255, 255, 255) !important;
+}
+
+.logout-button:hover {
+  color: red !important;
+  font-weight: bold;
+}
 
 .label {
-  grid-column: 1/8;
+  grid-column: 2/7;
 }
 
 .input-profile {
   margin-top: 5px;
   margin-bottom: 5px;
   height: 25px;
-  grid-column: 1/8;
+  grid-column: 2/7;
   border-radius: 5px;
   padding: 3px;
   border: rgb(0, 140, 255) 1px solid;
@@ -129,4 +147,42 @@ thead th {
 
 thead th:last-child {
   width: 156px;
+}
+
+.new-insert label {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  width: 50%;
+  display: block;
+}
+
+.insert-title {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.new-insert input {
+  padding: 8px;
+  width: 50%;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  display: block;
+}
+
+.new-insert button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  background-color: rgb(0, 132, 248);
+  width: 10%;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  display: block;
+}
+
+.new-insert button:hover {
+  background-color: rgb(1, 105, 197);
+  border-radius: 8px;
 }

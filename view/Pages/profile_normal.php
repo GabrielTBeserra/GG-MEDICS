@@ -20,7 +20,7 @@
             </nav>
 
             <div class="logged-info">
-                <p>Ola #{nome.paciente}! <a href="controllers/logout.php">Logout</a></p>
+                <p>Ola #{nome.paciente}! <a class="logout-button" href="controllers/logout.php">Logout</a></p>
             </div>
         </div>
 

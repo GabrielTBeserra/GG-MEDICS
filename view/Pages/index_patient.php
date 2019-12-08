@@ -22,7 +22,7 @@
             </nav>
 
             <div class="logged-info">
-                <p>Ola #{nome.paciente}! <a href="controllers/logout.php">Logout</a></p>
+                <p>Ola #{nome.paciente}! <a class="logout-button" href="controllers/logout.php">Logout</a></p>
             </div>
         </div>
 
@@ -33,9 +33,10 @@
                 </div>
             </div>
 
+            <!-- Gera o grafico da diabetes -->
             <div class="main-page-charts">
-                <h4>Inserir nova diabete</h4>
-                <form method="post" action="controllers/InserirDiabetes.php" onsubmit="return validate_diabetes();">
+                <h4 class="insert-title">Inserir nova diabete</h4>
+                <form class="new-insert" method="post" action="controllers/InserirDiabetes.php" onsubmit="return validate_diabetes();">
                     <label for="valor_dia">Valor da diabete</label>
                     <input type="number" id="valor_dia" name="valor_dia">
                     <label for="data_dia">Data da Medicao</label>
@@ -52,9 +53,10 @@
                 </div>
             </div>
 
+            <!-- Gera o grafico de pressao -->
             <div class="main-page-charts">
-                <h4>Inserir nova pressao</h4>
-                <form method="post" action="controllers/InserirPressao.php" onsubmit="return validate_pressao();">
+                <h4 class="insert-title" >Inserir nova pressao</h4>
+                <form class="new-insert"  method="post" action="controllers/InserirPressao.php" onsubmit="return validate_pressao();">
                     <label for="sistolico_press">Valor Sistolico</label>
                     <input type="number" id="sistolico_press" name="sistolico_press">
                     <label for="diastolico_press">Valor Diastolico</label>
