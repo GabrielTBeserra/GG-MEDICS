@@ -101,4 +101,23 @@ Class Patient {
 
         $this->connection->close();
     }
+
+    public function getPatient($id){
+        $query = "SELECT * FROM usuario where idUsuario = '$id'";
+
+        $result = $this->connection->query($query);
+
+        $rows;
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+        }
+
+
+        return $rows;
+
+        $this->connection->close();
+    }
 }

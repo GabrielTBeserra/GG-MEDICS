@@ -16,17 +16,21 @@
         <div class="menu-bar">
             <nav id="menu-itens">
                 <ul>
-                    <li><a href="/Web/">Inicio</a></li>
-                    <li><a href="/Web/profile.php">Perfil</a></li>
+                <button onclick="location.href = document.referrer;">Voltar</button>
                 </ul>
             </nav>
-
-            <div class="logged-info">
-                <p>Ola #{nome.paciente}! <a href="controllers/logout.php">Logout</a></p>
-            </div>
         </div>
 
+
+
         <div class="page-content"> 
+            <div class="main-page-charts">
+                <p>Nome: #{nome.paciente}</p>
+                <p>Tipo De Diabetes: #{diabete.paciente}</p>
+                <p>#{hipertenso.paciente}</p>
+                <p>Data de nascimento: #{dataNasci.paciente} (Idade: #{idade.paciente})</p><p></p>
+            </div>
+
             <div class="main-page-charts">
                 <div id="chart-container">
                     <canvas id="graficoDiabete"></canvas>

@@ -14,9 +14,9 @@
         <div class="menu-bar">
             <nav id="menu-itens">
                 <ul>
-                    <li><a href="/Web/">Inicio</a></li>
-                    <li><a href="/Web/profile.php">Perfil</a></li>
+                <li><a href="/Web/">Inicio</a></li>
                     <li><a href="/Web/search.php">Buscar</a></li>
+                    <li><a href="/Web/profile.php">Perfil</a></li>
                 </ul>
             </nav>
             <div class="logged-info">

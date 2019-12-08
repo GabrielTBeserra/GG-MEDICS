@@ -19,22 +19,18 @@ class ListaPressao
             echo "Failed to connect to MySQL: " . $conn->connect_error();
         }
         // Defines query
-        $query = "SELECT * FROM pressao where idPaciente = '$this->id'";
+        $query = "SELECT * FROM paciente where idUsuario = '$this->id'";
         // Select records
         $result = $conn->query($query);
 
 
 
-        $items = '';
+        $items;
         if ($result) {
             while ($row = $result->fetch_assoc()) {
-                $item = file_get_contents('view/Pages/pressao_item.html');
-                $item = str_replace('#{valorDiastolico.pressao}', $row['valorDiastolico'], $item);
-                $item = str_replace('#{valorSistolico.pressao}',      $row['valorSistolico'],      $item);
-                $timestamp = strtotime($row['dataMedicao']);
-                $item = str_replace('#{data.pressao}',      date("d-m-Y H:i:s", $timestamp),      $item);
-                $items .= $item;
+                $items = $row;
             }
+            
         }
 
 

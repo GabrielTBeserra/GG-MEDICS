@@ -1,17 +1,22 @@
 <?php
+
+require_once 'models/Patient.php';
 require_once 'models/lista_diabete.php';
 require_once 'models/lista_pressao.php';
 
+
 class ViewProfile
 {
-    public function render($id)
+    public function render($id , $nome , $diabete , $hipertenso , $data , $idade)
     {
-        $lista_diabete = new ListaDiabete($id);
-        $lista_pressao = new ListaPressao($id);
 
         $html = file_get_contents('view/Pages/view_profile.php');
-        $html = str_replace('#{itens.diabete}', $lista_diabete->lista(), $html);
-        $html = str_replace('#{itens.pressao}', $lista_pressao->lista(), $html);
+        
+        $html = str_replace('#{nome.paciente}', $nome, $html);
+        $html = str_replace('#{diabete.paciente}', $diabete, $html);
+        $html = str_replace('#{hipertenso.paciente}', $hipertenso, $html);
+        $html = str_replace('#{dataNasci.paciente}', $data , $html);
+        $html = str_replace('#{idade.paciente}', $idade, $html);
 
         print $html;
     }

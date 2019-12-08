@@ -1,127 +1,126 @@
 var vars = {};
 
-$(document).ready(function () {
+$(document).ready(function() {
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(
+    m,
+    key,
+    value
+  ) {
+    vars[key] = value;
+  });
 
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-        vars[key] = value;
-    });
-
-    console.log(vars['id']);
-    showGraph();
+  console.log(vars["id"]);
+  showGraph();
 });
 
-
 function showGraph() {
-    $.ajax({
-        url: "controllers/NiveisDiabetes.php",
-        type: "POST",
-        data: {
-            id: vars['id']
-        },
-        dataType: "html"
+  $.ajax({
+    url: "controllers/NiveisDiabetes.php",
+    type: "POST",
+    data: {
+      id: vars["id"]
+    },
+    dataType: "html"
+  })
+    .done(function(resposta) {
+      resposta = JSON.parse(resposta);
+      var name = [];
+      var marks = [];
 
-    }).done(function (resposta) {
-        resposta = JSON.parse(resposta);
+      for (var i in resposta) {
+        name.push(resposta[i].dataMedicao);
+        marks.push(resposta[i].valorMedido);
+      }
 
-        var name = [];
-        var marks = [];
+      var chartdata = {
+        labels: name,
+        datasets: [
+          {
+            label: "Nivel glicose",
+            backgroundColor: "#49e2ff",
+            borderColor: "#9f34eb",
+            hoverBackgroundColor: "#CCCCCC",
+            hoverBorderColor: "#666666",
+            data: marks,
+            fill: false
+          }
+        ]
+      };
 
-        for (var i in resposta) {
-            name.push(resposta[i].dataMedicao);
-            marks.push(resposta[i].valorMedido);
-        }
+      var graphTarget = $("#graficoDiabete");
 
-        var chartdata = {
-            labels: name,
-            datasets: [
-                {
-                    label: 'Nivel glicose',
-                    backgroundColor: '#49e2ff',
-                    borderColor: '#9f34eb',
-                    hoverBackgroundColor: '#CCCCCC',
-                    hoverBorderColor: '#666666',
-                    data: marks,
-                    fill: false
-                }
-            ]
-        };
-
-        var graphTarget = $("#graficoDiabete");
-
-        var barGraph = new Chart(graphTarget, {
-            type: 'line',
-            data: chartdata
-        });
-
-    }).fail(function (jqXHR, textStatus) {
-        console.log("Request failed: " + textStatus);
-
-    }).always(function () {
-        console.log("completou");
+      var barGraph = new Chart(graphTarget, {
+        type: "line",
+        data: chartdata
+      });
+    })
+    .fail(function(jqXHR, textStatus) {
+      console.log("Request failed: " + textStatus);
+    })
+    .always(function() {
+      console.log("completou");
     });
 
-
-
-    /*
+  /*
 
     */
-    $.ajax({
-        url: "controllers/NiveisPressao.php",
-        type: "POST",
-        data: {
-            id: vars['id']
-        },
-        dataType: "html"
+  $.ajax({
+    url: "controllers/NiveisPressao.php",
+    type: "POST",
+    data: {
+      id: vars["id"]
+    },
+    dataType: "html"
+  })
+    .done(function(resposta) {
+      resposta = JSON.parse(resposta);
+      var name = [];
+      var marks = [];
+      var values = [];
 
-    }).done(function (resposta) {
-        resposta = JSON.parse(resposta);
+      for (var i in resposta) {
+        name.push(resposta[i].dataMedicao);
 
-        var name = [];
-        var marks = [];
-        var values = [];
+        marks.push(resposta[i].valorSistolico);
 
-        for (var i in resposta) {
-            name.push(resposta[i].dataMedicao);
+        values.push(resposta[i].valorDiastolico);
+      }
 
-            marks.push(resposta[i].valorSistolico);
+      var chartdata = {
+        labels: name,
+        datasets: [
+          {
+            label: "Valor Sistolico",
+            backgroundColor: "#49e2ff",
+            borderColor: "#46d5f1",
+            hoverBackgroundColor: "#CCCCCC",
+            hoverBorderColor: "#666666",
+            data: marks,
+            fill: false
+          },
+          {
+            label: "Valor Diastolico",
+            backgroundColor: "#eb4034",
+            borderColor: "#46d5f1",
+            hoverBackgroundColor: "#CCCCCC",
+            hoverBorderColor: "#666666",
+            data: values,
+            fill: false
+          }
+        ]
+      };
 
-            values.push(resposta[i].valorDiastolico);
-        }
+      var graphTarget = $("#graficoPressao");
 
-        var chartdata = {
-            labels: name,
-            datasets: [
-                {
-                    label: 'Valor Sistolico',
-                    backgroundColor: '#49e2ff',
-                    borderColor: '#46d5f1',
-                    hoverBackgroundColor: '#CCCCCC',
-                    hoverBorderColor: '#666666',
-                    data: marks,
-                    fill: false
-                }, {
-                    label: 'Valor Diastolico',
-                    backgroundColor: '#eb4034',
-                    borderColor: '#46d5f1',
-                    hoverBackgroundColor: '#CCCCCC',
-                    hoverBorderColor: '#666666',
-                    data: values,
-                    fill: false
-                }
-            ]
-        };
-
-        var graphTarget = $("#graficoPressao");
-
-        var barGraph = new Chart(graphTarget, {
-            type: 'bar',
-            data: chartdata
-        });
-
-    }).fail(function (jqXHR, textStatus) {
-        console.log("Request failed: " + textStatus);
-
-    }).always(function () {
-        console.log("completou");
+      var barGraph = new Chart(graphTarget, {
+        type: "bar",
+        data: chartdata
+      });
+    })
+    .fail(function(jqXHR, textStatus) {
+      console.log("Request failed: " + textStatus);
+    })
+    .always(function() {
+      console.log("completou");
     });
 }

@@ -54,11 +54,7 @@ class SingIn
                 echo "true";
             }
         }
-
-
-
-
-
+        
         $conn->close();
 
 

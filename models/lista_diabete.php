@@ -21,23 +21,30 @@ class ListaDiabete
             echo "Failed to connect to MySQL: " . $conn->connect_error();
         }
         // Defines query
-        $query = "SELECT * FROM diabetes where idPaciente = '$this->id'";
+        $query = "SELECT * FROM paciente where idUsuario = '$this->id'";
         // Select records
         $result = $conn->query($query);
 
 
 
-        $items = '';
+        $items;
         if ($result) {
             while ($row = $result->fetch_assoc()) {
-                $item = file_get_contents('view/Pages/diabete_item.html');
-                $item = str_replace('#{valor.diabete}', $row['valorMedido'], $item);
-                $timestamp = strtotime($row['dataMedicao']);
-                $item = str_replace('#{data.diabete}',      date("d-m-Y H:i:s", $timestamp),      $item);
-                $items .= $item;
+                $items = $row;
             }
         }
 
+        $idDia = $items['tipoDiabete'];
+
+        $query2 = "SELECT * FROM tiposdiabetes where idDiabetes = '$idDia'";
+        // Select records
+        $result2 = $conn->query($query2);
+
+        if ($result2) {
+            while ($row2 = $result2->fetch_assoc()) {
+                $items = $row2;
+            }
+        }
 
 
         // Close connection
