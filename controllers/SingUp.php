@@ -3,6 +3,7 @@
 require_once '../models/Patient.php';
 require_once '../models/insert_medic.php';
 
+// COntroller responsavel por cadastrar um novo usuario
 
 $sexo = $_POST['sexo'];
 $tipoDiabete = $_POST['tipoDiabete'];
@@ -49,8 +50,8 @@ class SingUp
 
     public function register()
     {
+        // Em caso de a opcao escolhida na tela ser medico ele cria como medico
         if ($this->isMedic == "true") {
-            
             new InsertMedic($this->nome, $this->sexo, $this->password, $this->email, 'medico', $this->cpf);
         } else {
             $newPat = new Patient();

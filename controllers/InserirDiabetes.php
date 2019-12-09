@@ -11,6 +11,8 @@ $dateStr = $data . " " . $horario;
 $timestamp = strtotime($dateStr);
 $datetime = date('Y-m-d H:i:s', $timestamp);
 
+// Insere um novo registro de diabete para aquele usuario em questao
+
 session_start();
 
 if (!($data . trim("") == "" || $horario . trim("") == "" || $valor . trim("") == "")) {

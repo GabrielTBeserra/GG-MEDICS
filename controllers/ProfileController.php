@@ -12,14 +12,13 @@ class Profile
     public function index()
     {
         if ((isset($_SESSION['idUser']) == true)) {
-            if($_SESSION['isMedic'] == "true"){
+            if ($_SESSION['isMedic'] == "true") {
                 $view = new ProfileMedic();
                 $view->render($_SESSION);
             } else {
                 $view = new ProfilePatient();
                 $view->render($_SESSION);
             }
-            
         } else {
             $login = new LoginView();
             $login->render();

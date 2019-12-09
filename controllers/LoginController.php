@@ -7,6 +7,8 @@ $password = $_POST['password'];
 
 $auth = new Auth($user, $password);
 
+// Faz a veficacao ser o usuario e senha inseridos sao validos
+
 class Auth
 {
     private $user;

@@ -3,6 +3,7 @@
 
 require_once '../models/select_patient.php';
 
+// responsavel por popular a lista com todos paciente disponiveis e acordo com a busca
 
 session_start();
 
