@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #d5d4d4;
+  background-color: #ebebeb;
 }
 
 .main-content {
@@ -64,9 +64,17 @@ body {
 }
 
 .main-page-charts {
+  border-radius: 20px;
   margin-top: 40px;
   grid-column: 2/7;
   background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.charts-title{
+  margin: 10px;
+  grid-column: 1/8;
 }
 
 .search-page {
@@ -93,18 +101,22 @@ body {
   font-weight: bold;
 }
 
+.charts-canvas{
+  grid-column: 1/8;
+}
+
 .label {
-  grid-column: 2/7;
+  grid-column: 1/8;
 }
 
 .input-profile {
   margin-top: 5px;
   margin-bottom: 5px;
   height: 25px;
-  grid-column: 2/7;
+  grid-column: 1/8;
   border-radius: 5px;
   padding: 3px;
-  border: rgb(0, 140, 255) 1px solid;
+  border: 1px rgb(162, 0, 255) solid;
 }
 
 .main-page-resume {
@@ -153,33 +165,43 @@ thead th:last-child {
   margin-left: 15px;
   margin-bottom: 10px;
   width: 50%;
+  grid-column: 1/8;
   display: block;
 }
 
 .insert-title {
+  grid-column: 1/8;
+  margin-top: 5px;
   margin-left: 15px;
   margin-bottom: 10px;
 }
 
+.new-insert{
+  grid-column: 1/8;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .new-insert input {
-  padding: 8px;
-  width: 50%;
-  margin-bottom: 10px;
-  margin-left: 15px;
-  display: block;
+  border-radius: 15px;
+  border: 1px rgb(0, 175, 245) solid;
+  padding: 6px;
+  margin-bottom: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid-column: 1/8;
+
 }
 
 .new-insert button {
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   color: white;
   padding: 8px;
   background-color: rgb(0, 132, 248);
-  width: 10%;
   margin-bottom: 10px;
-  margin-left: 15px;
-  display: block;
+  grid-column: 2/7;
 }
 
 .new-insert button:hover {

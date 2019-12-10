@@ -27,8 +27,10 @@
         </div>
 
         <div class="page-content"> 
+        
             <div class="main-page-charts">
-                <div id="chart-container">
+            <h3 class="charts-title">Niveis de diabetes</h3>
+                <div class="charts-canvas" id="chart-container">
                     <canvas id="graficoDiabete"></canvas>
                 </div>
             </div>
@@ -48,14 +50,15 @@
             </div>
 
             <div class="main-page-charts">
-                <div id="chart-container">
+                <h2 class="charts-title">Niveis de pressao</h2>
+                <div class="charts-canvas" id="chart-container">
                     <canvas id="graficoPressao"></canvas>
                 </div>
             </div>
 
             <!-- Gera o grafico de pressao -->
             <div class="main-page-charts">
-                <h4 class="insert-title" >Inserir nova pressao</h4>
+                <h3 class="insert-title" >Inserir nova pressao</h3>
                 <form class="new-insert"  method="post" action="controllers/InserirPressao.php" onsubmit="return validate_pressao();">
                     <label for="sistolico_press">Valor Sistolico</label>
                     <input type="number" id="sistolico_press" name="sistolico_press">
