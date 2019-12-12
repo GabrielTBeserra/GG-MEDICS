@@ -6,6 +6,6 @@ $email = $_POST['email'];
 
 session_start();
 
-$novaSenha = new Change();
-$novaSenha->email($_SESSION['idUser'] , $email);
+$novoEmail = new Change();
+$novoEmail->email($_SESSION['idUser'] , $email);
 
