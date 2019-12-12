@@ -81,8 +81,22 @@ body {
 .search-page {
   margin-top: 40px;
   grid-column: 2/7;
-  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
+.search-page-label{
+  grid-column: 1/8;
+}
+
+.search-page-termo{
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px rgb(82, 82, 82) solid;
+  grid-column: 1/8;
+
+}
+
 
 .profile-infos {
   margin-top: 40px;
@@ -93,7 +107,7 @@ body {
 }
 .logout-button {
   text-decoration: none;
-  color: rgb(255, 255, 255) !important;
+  color: rgb(190, 41, 41) !important;
 }
 
 .logout-button:hover {
@@ -250,4 +264,16 @@ table.tableList tfoot .links a{
 .new-insert button:hover {
   background-color: rgb(1, 105, 197);
   border-radius: 8px;
+}
+
+.button-voltar {
+  font-size: 15px;
+  background-color: #0090c9;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.button-voltar:hover {
+  color: #0057c9;
 }

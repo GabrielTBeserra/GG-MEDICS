@@ -16,7 +16,7 @@
         <div class="menu-bar">
             <nav id="menu-itens">
                 <ul>
-                <button class="button-voltar" onclick="location.href = document.referrer;">Voltar</button>
+                    <button class="button-voltar" onclick="location.href = document.referrer;">Voltar</button>
                 </ul>
             </nav>
         </div>

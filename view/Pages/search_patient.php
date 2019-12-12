@@ -27,8 +27,8 @@
 
         <div class="page-content">
             <div class="search-page">
-                <label for="termo">Termo de busca (id ou nome)</label>
-                <input type="text" id="termo" name="termo">
+                <label class="search-page-label" for="termo">Termo de busca (id ou nome)</label>
+                <input class="search-page-termo" type="text" id="termo" name="termo">
             </div>
 
 
