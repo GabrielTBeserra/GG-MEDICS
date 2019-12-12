@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="view/Styles/style.css">
     <title>Seja bem vindo</title>
@@ -26,24 +27,31 @@
 
         <div class="page-content">
             <div class="profile-infos">
-                <label class="label" for="nome">Nome</label>
-                <input class="input-profile" id="nome" type="text" name="nome" value="#{nome.paciente}" readonly>
-                <label class="label" for="email">Email</label>
-                <input class="input-profile" id="email" type="email" name="email" value="#{email.paciente}">
-                <label class="label" for="cpf">CPF</label>
-                <input class="input-profile" id="cpf" type="text" name="cpf" value="#{cpf.paciente}" readonly>
-                <label class="label" for="sexo">Sexo</label>
-                <input class="input-profile" id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
-                <label class="label" for="dataNasc">Data Nascimento</label>
-                <input class="input-profile" id="dataNasc" type="date" name="dataNasc" value="#{dataNasc.paciente}" readonly>
-                <label class="label" for="tipo-dia">Tipo de diabetes</label>
-                <input class="input-profile" type="text" name="tipo-dia" id="tipo-dia" value="#{diabete.paciente}">
-                <label class="label" for="hiper">Hipertenso</label>
-                <input class="input-profile" type="text" name="hiper" id="hiper" value="#{hiper.paciente}">
+                <form>
+                    <label class="label" for="nome">Nome</label>
+                    <input class="input-profile" id="nome" type="text" name="nome" value="#{nome.paciente}" readonly>
+                    <label class="label" for="email">Email</label>
+                    <input class="input-profile" id="email" type="email" name="email" value="#{email.paciente}">
+                    <label class="label" for="cpf">CPF</label>
+                    <input class="input-profile" id="cpf" type="text" name="cpf" value="#{cpf.paciente}" readonly>
+                    <label class="label" for="sexo">Sexo</label>
+                    <input class="input-profile" id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
+                    <label class="label" for="dataNasc">Data Nascimento</label>
+                    <input class="input-profile" id="dataNasc" type="date" name="dataNasc" value="#{dataNasc.paciente}" readonly>
+                    <label class="label" for="tipo-dia">Tipo de diabetes</label>
+                    <input class="input-profile" type="text" name="tipo-dia" id="tipo-dia" value="#{diabete.paciente}" readonly>
+                    <label class="label" for="hiper">Hipertenso</label>
+                    <input class="input-profile" type="text" name="hiper" id="hiper" value="#{hiper.paciente}" readonly>
+                    <label class="label" for="senha">Nova senha</label>
+                    <input class="input-profile" type="password" id="senha" name="senha">
+                    <button type="button" onClick="atualizar();">Salvar</button>
+                </form>
             </div>
         </div>
 
     </div>
+
+    <script src="view/scripts/Atualizar.js"></script>
 </body>
 
 </html>
