@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="view/Styles/style.css">
     <title>Seja bem vindo</title>
@@ -36,13 +37,15 @@
                 <input class="input-profile" id="crm" type="text" name="cpf" value="#{crm.paciente}" readonly>
                 <label class="label" for="sexo">Sexo</label>
                 <input class="input-profile" id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
-                <label class="label" for="dataNasc">Data Nascimento</label>
-                <input class="input-profile" id="dataNasc" type="date" name="dataNasc" value="#{dataNasc.paciente}" readonly>
-                
+                <label class="label" for="senha">Nova senha</label>
+                <input class="input-profile" type="password" id="senha" name="senha">
+                <button type="button" onClick="atualizar();">Salvar</button> 
             </div>
         </div>
 
     </div>
+    
+    <script src="view/scripts/Atualizar.js"></script>
 </body>
 
 </html>

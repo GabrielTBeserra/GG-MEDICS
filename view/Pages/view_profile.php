@@ -25,23 +25,28 @@
 
         <div class="page-content"> 
             <div class="main-page-charts">
+                <div class="charts-canvas">
                 <p>Nome: #{nome.paciente}</p>
                 <p>Tipo De Diabetes: #{diabete.paciente}</p>
                 <p>#{hipertenso.paciente}</p>
                 <p>Data de nascimento: #{dataNasci.paciente} (Idade: #{idade.paciente})</p><p></p>
+                </div>
+                
             </div>
 
             <div class="main-page-charts">
-                <div id="chart-container">
-                    <canvas id="graficoDiabete"></canvas>
+            <h3 class="charts-title">Niveis de diabetes</h3>
+                <div class="charts-canvas" id="chart-container">
+                    <canvas  id="graficoDiabete"></canvas>
                 </div>
             </div>
 
             
 
             <div class="main-page-charts">
-                <div id="chart-container">
-                    <canvas id="graficoPressao"></canvas>
+            <h3 class="charts-title">Niveis de pressao</h3>
+                <div class="charts-canvas" id="chart-container">
+                    <canvas  id="graficoPressao"></canvas>
                 </div>
             </div>
 

@@ -1,5 +1,3 @@
-
-
 function atualizar() {
     var emailVal = document.querySelector("#email").value;
     var senhaVal = document.querySelector("#senha").value;
