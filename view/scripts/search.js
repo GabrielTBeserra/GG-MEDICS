@@ -85,6 +85,7 @@ function populate_table(list) {
         button.setAttribute("id", data.idUsuario);
         button.setAttribute("name", data.idUsuario);
         button.setAttribute("onclick", "acompanhar(" + data.idUsuario + ")");
+        button.setAttribute("class", "acom-button");
 
 
         td1.appendChild(userId);

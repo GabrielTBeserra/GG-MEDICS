@@ -39,7 +39,7 @@
                 <input class="input-profile" id="sexo" type="text" name="sexo" value="#{sexo.paciente}" readonly>
                 <label class="label" for="senha">Nova senha</label>
                 <input class="input-profile" type="password" id="senha" name="senha">
-                <button type="button" onClick="atualizar();">Salvar</button> 
+                <button class="button-profile" type="button" onClick="atualizar();">Salvar</button> 
             </div>
         </div>
 

@@ -27,7 +27,6 @@
 
         <div class="page-content">
             <div class="profile-infos">
-                <form>
                     <label class="label" for="nome">Nome</label>
                     <input class="input-profile" id="nome" type="text" name="nome" value="#{nome.paciente}" readonly>
                     <label class="label" for="email">Email</label>
@@ -44,8 +43,7 @@
                     <input class="input-profile" type="text" name="hiper" id="hiper" value="#{hiper.paciente}" readonly>
                     <label class="label" for="senha">Nova senha</label>
                     <input class="input-profile" type="password" id="senha" name="senha">
-                    <button type="button" onClick="atualizar();">Salvar</button>
-                </form>
+                    <button class="button-profile" type="button" onClick="atualizar();">Salvar</button>
             </div>
         </div>
 

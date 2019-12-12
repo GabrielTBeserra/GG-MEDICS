@@ -26,12 +26,13 @@
 
         <div class="page-content">
             <div class="main-page-charts">
-                <table style="width:100%">
+                <table class="tableList">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>CPF</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

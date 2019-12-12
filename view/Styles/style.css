@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #ebebeb;
+  background-color: #f3f3f3;
 }
 
 .main-content {
@@ -72,6 +72,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
+
 .charts-title{
   margin: 10px;
   grid-column: 1/8;
@@ -86,7 +87,6 @@ body {
 .profile-infos {
   margin-top: 40px;
   grid-column: 2/7;
-  background-color: white;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -116,7 +116,23 @@ body {
   grid-column: 1/8;
   border-radius: 5px;
   padding: 3px;
-  border: 1px rgb(162, 0, 255) solid;
+  border: 1px rgb(126, 126, 126) solid;
+}
+
+.button-profile {
+  color: white;
+  margin-top: 15px;
+  grid-column: 2/7;
+  padding: 8px;
+  border: none;
+  background-color: #0050c9;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.button-profile:hover {
+  background-color: rgb(0, 65, 161);
+
 }
 
 .main-page-resume {
@@ -125,40 +141,67 @@ body {
   background-color: magenta;
 }
 
-table {
-  width: 716px;
+.acom-button{
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(0, 81, 255);
+  padding: 5px;
+  border: none;
+}
+
+.acom-button:hover{
+  cursor: pointer;
+  background-color: rgb(0, 38, 255);
+}
+
+
+table.tableList {
+  grid-column: 1/8;
+  border: 0px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.tableList td, table.tableList th {
+  border: 1px solid #AAAAAA;
+  padding: 5px 7px;
+}
+table.tableList tbody td {
+  font-size: 13px;
+}
+table.tableList tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.tableList thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.tableList thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.tableList thead th:first-child {
+  border-left: none;
+}
+
+table.tableList tfoot td {
+  font-size: 13px;
+}
+table.tableList tfoot .links {
+  text-align: right;
+}
+table.tableList tfoot .links a{
   display: inline-block;
-  border-spacing: 0;
-}
-
-tbody,
-thead tr {
-  width: 100%;
-}
-
-tbody {
-  height: 300px;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-tbody td {
-  height: 30px;
-  text-align: center;
-  width: 100%;
-  border: 1px solid black;
-}
-
-thead th {
-  background-color: rgb(179, 179, 179);
-  text-align: center;
-  width: 100%;
-  border: 1px solid black;
-}
-
-thead th:last-child {
-  width: 156px;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
 
 .new-insert label {

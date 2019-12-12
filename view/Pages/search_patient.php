@@ -34,7 +34,7 @@
 
 
             <div class="search-page">
-                <table style="width:100%">
+                <table class="tableList">
                     <thead>
                         <tr>
                             <th>ID</th>
