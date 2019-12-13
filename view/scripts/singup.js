@@ -27,7 +27,7 @@ function singup() {
     const hiper = document.querySelector("#hiper").checked;
     const nome = document.querySelector("#name").value;
     const cpf = document.querySelector("#cpf").value;
-    const sexo = document.querySelector("input[name='sexo']:checked").value;
+    var sexo = document.querySelector("input[name='sexo']:checked").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
     const tipoDiabete = document.querySelector("#tipoDiabete").value;
@@ -45,6 +45,7 @@ function singup() {
         };
     }
 
+    sexo = sexo.toLowerCase();
 
     $.ajax({
         url: "controllers/SingUp.php",
