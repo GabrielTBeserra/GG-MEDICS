@@ -14,6 +14,9 @@
 - Banco de dados mySQL
 - jquery
 
+### Membros
+- Gabriel Teles Beserra 827333
+- Gabriel Henrique De Deus Vieira 829622
 
 ### Apresentacao
 
