@@ -2,6 +2,7 @@
 
 ### Trabalho realizado pela materia de Programacao Web 2 - Universidade de Ribeirao preto
 
+### O Script sql é o arquivo web.sql
 
 ### Objetivos
 - Cadastro de pacientes
